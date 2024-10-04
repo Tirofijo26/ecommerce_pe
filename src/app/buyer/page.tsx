@@ -5,6 +5,7 @@ import { Search, ShoppingCart, User, LogOut } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { useUsuario } from '@/store'
 
 const categories = ["Todos los productos", "Electrónica", "Ropa", "Hogar"]
 const products = [
@@ -17,6 +18,12 @@ const products = [
 ]
 
 export default function BuyerHomepage() {
+
+  const {usuarioIniciado} = useUsuario()
+
+  console.log(usuarioIniciado);
+  
+
   const [activeCategory, setActiveCategory] = useState("Todos los productos")
   const [searchTerm, setSearchTerm] = useState("")
 

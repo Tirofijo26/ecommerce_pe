@@ -1,8 +1,11 @@
-import Image from "next/image";
+"use client";
+import { useEffect } from "react";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <>hola mundo</>
-    
-  );
+  useEffect(() => {
+    redirect(`/auth/login`);
+  }, []);
+
+  return <></>;
 }
