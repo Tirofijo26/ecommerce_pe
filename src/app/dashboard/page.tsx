@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useState } from "react";
 import {
   Package,
@@ -10,6 +10,7 @@ import {
   LogOut,
 } from "lucide-react";
 
+import { useRouter } from "next/navigation"; // Importar useRouter
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -57,8 +58,8 @@ const sales = [
 
 export default function VendorDashboard() {
   const { usuarioIniciado } = useUsuario();
+  const router = useRouter(); // Inicializar useRouter
 
-  console.log(usuarioIniciado);
   const [activeTab, setActiveTab] = useState("inventory");
 
   return (
@@ -70,7 +71,7 @@ export default function VendorDashboard() {
             <Button variant="ghost" size="icon">
               <User size={24} />
             </Button>
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" onClick={() => router.push('/')}> {/* Redirige a la página de inicio */}
               <LogOut size={24} />
             </Button>
           </div>
