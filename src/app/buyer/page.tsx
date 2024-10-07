@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { Search, ShoppingCart, User, LogOut } from 'lucide-react'
+import { useRouter } from 'next/navigation'; // Importa useRouter
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -18,12 +19,9 @@ const products = [
 ]
 
 export default function BuyerHomepage() {
-
   const {usuarioIniciado} = useUsuario()
-
-  console.log(usuarioIniciado);
+  const router = useRouter();  // Inicializa useRouter
   
-
   const [activeCategory, setActiveCategory] = useState("Todos los productos")
   const [searchTerm, setSearchTerm] = useState("")
 
@@ -53,7 +51,7 @@ export default function BuyerHomepage() {
             <Button variant="ghost" size="icon">
               <ShoppingCart size={24} />
             </Button>
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" onClick={() => router.push('/')}> {/* Redirige a la página de inicio */}
               <LogOut size={24} />
             </Button>
           </div>
