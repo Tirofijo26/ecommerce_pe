@@ -64,8 +64,8 @@ export default function UserDetail() {
               <span>{usuarioIniciado.fechaRegistro}</span>
             </div>
           </div>
-          <div className="flex justify-end space-x-4 mt-6">
-            <Button onClick={handleBack}>Volver</Button>
+          <div className="flex justify-end space-x-4 mt-6 ">
+            <Button className="bg-green-600" onClick={handleBack}>Volver</Button>
           </div>
         </CardContent>
       </Card>

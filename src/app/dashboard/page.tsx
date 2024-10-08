@@ -63,7 +63,7 @@ export default function VendorDashboard() {
   const [activeTab, setActiveTab] = useState("inventory");
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col  min-h-screen">
       <header className="bg-green-600 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">MerkZone Vendedor</h1>
@@ -274,9 +274,7 @@ export default function VendorDashboard() {
         </Tabs>
       </main>
 
-      <footer className="bg-gray-100 text-center p-4 mt-8">
-        <p>&copy; 2023 MerkZone. Todos los derechos reservados.</p>
-      </footer>
+      
     </div>
   );
 }

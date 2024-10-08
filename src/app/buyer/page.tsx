@@ -45,7 +45,7 @@ export default function BuyerHomepage() {
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
             </form>
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" onClick={() => router.replace("/profile")}>
               <User size={24} />
             </Button>
             <Button variant="ghost" size="icon">
@@ -94,9 +94,7 @@ export default function BuyerHomepage() {
         </section>
       </main>
 
-      <footer className="bg-gray-100 text-center p-4 mt-8">
-        <p>&copy; 2023 MerkZone. Todos los derechos reservados.</p>
-      </footer>
+      
     </div>
   )
 }
