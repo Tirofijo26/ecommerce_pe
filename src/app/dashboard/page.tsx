@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState } from "react";
 import {
   Package,
@@ -68,10 +68,20 @@ export default function VendorDashboard() {
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold">MerkZone Vendedor</h1>
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => router.replace("/profile")}
+            >
               <User size={24} />
             </Button>
-            <Button variant="ghost" size="icon" onClick={() => router.push('/')}> {/* Redirige a la página de inicio */}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => router.push("/")}
+            >
+              {" "}
+              {/* Redirige a la página de inicio */}
               <LogOut size={24} />
             </Button>
           </div>
