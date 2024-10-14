@@ -29,9 +29,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <footer className="bg-gray-100 text-center p-4 mt-8">
-          <p>&copy; 2023 MerkZone. Todos los derechos reservados.</p>
-        </footer>
       </body>
     </html>
   );

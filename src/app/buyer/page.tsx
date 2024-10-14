@@ -1,33 +1,83 @@
-'use client'
-import { useState } from 'react'
-import { Search, ShoppingCart, User, LogOut } from 'lucide-react'
-import { useRouter } from 'next/navigation'; // Importa useRouter
+"use client";
+import { useState } from "react";
+import { Search, ShoppingCart, User, LogOut } from "lucide-react";
+import { useRouter } from "next/navigation"; // Importa useRouter
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { useUsuario } from '@/store'
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { CartProduct, useCartStore, useUsuario } from "@/store";
 
-const categories = ["Todos los productos", "Electrónica", "Ropa", "Hogar"]
+const categories = ["Todos los productos", "Electrónica", "Ropa", "Hogar"];
 const products = [
-  { id: 1, name: "Producto 1", price: 99.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 2, name: "Producto 2", price: 149.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 3, name: "Producto 3", price: 79.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 4, name: "Producto 4", price: 129.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 5, name: "Producto 5", price: 89.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 6, name: "Producto 6", price: 199.99, image: "/placeholder.svg?height=200&width=200" },
-]
+  {
+    id: 1,
+    nombre: "Producto 1",
+    cantidad: 1,
+    precio: 99.99,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+  {
+    id: 2,
+    nombre: "Producto 2",
+    cantidad: 1,
+    precio: 149.99,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+  {
+    id: 3,
+    nombre: "Producto 3",
+    cantidad: 1,
+    precio: 79.99,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+  {
+    id: 4,
+    nombre: "Producto 4",
+    cantidad: 1,
+    precio: 129.99,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+  {
+    id: 5,
+    nombre: "Producto 5",
+    cantidad: 1,
+    precio: 89.99,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+  {
+    id: 6,
+    nombre: "Producto 6",
+    cantidad: 1,
+    precio: 199.99,
+    image: "/placeholder.svg?height=200&width=200",
+  },
+];
 
 export default function BuyerHomepage() {
-  const {usuarioIniciado} = useUsuario()
-  const router = useRouter();  // Inicializa useRouter
-  
-  const [activeCategory, setActiveCategory] = useState("Todos los productos")
-  const [searchTerm, setSearchTerm] = useState("")
+  const addProductToCart = useCartStore((state) => state.addProductTocart);
 
-  const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+  const { usuarioIniciado } = useUsuario();
+  const router = useRouter(); // Inicializa useRouter
+
+  const [activeCategory, setActiveCategory] = useState("Todos los productos");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredProducts = products.filter((product) =>
+    product.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const addToCart = (product :CartProduct) => {
+    const cartProduct: CartProduct = {
+      id: product.id,
+      nombre: product.nombre,
+      precio: product.precio,
+      cantidad: product.cantidad,
+      image: product.image, 
+    };
+
+    addProductToCart(cartProduct);
+  }
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -43,15 +93,28 @@ export default function BuyerHomepage() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+              <Search
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                size={20}
+              />
             </form>
-            <Button variant="ghost" size="icon" onClick={() => router.replace("/profile")}>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => router.replace("/profile")}
+            >
               <User size={24} />
             </Button>
             <Button variant="ghost" size="icon">
-              <ShoppingCart size={24} />
+              <ShoppingCart size={24} onClick={() => router.replace("/cart")} />
             </Button>
-            <Button variant="ghost" size="icon" onClick={() => router.push('/')}> {/* Redirige a la página de inicio */}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => router.push("/")}
+            >
+              {" "}
+              {/* Redirige a la página de inicio */}
               <LogOut size={24} />
             </Button>
           </div>
@@ -66,7 +129,9 @@ export default function BuyerHomepage() {
               <button
                 key={category}
                 className={`block w-full text-left px-4 py-2 rounded ${
-                  activeCategory === category ? 'bg-green-600 text-white' : 'hover:bg-green-100'
+                  activeCategory === category
+                    ? "bg-green-600 text-white"
+                    : "hover:bg-green-100"
                 }`}
                 onClick={() => setActiveCategory(category)}
               >
@@ -81,20 +146,32 @@ export default function BuyerHomepage() {
             {filteredProducts.map((product) => (
               <Card key={product.id} className="flex flex-col">
                 <CardContent className="p-4">
-                  <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-md mb-4" />
-                  <h3 className="text-lg font-semibold">{product.name}</h3>
-                  <p className="text-green-600 font-bold">${product.price.toFixed(2)}</p>
+                  <img
+                    src={product.image}
+                    alt={product.nombre}
+                    className="w-full h-48 object-cover rounded-md mb-4"
+                  />
+                  <h3 className="text-lg font-semibold">{product.nombre}</h3>
+                  <p className="text-green-600 font-bold">
+                    ${product.precio.toFixed(2)}
+                  </p>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  <Button className="w-full">Agregar al carrito</Button>
+                  <Button
+                    className="w-full"
+                    onClick={() => addToCart(product)}
+                  >
+                    Agregar al carrito
+                  </Button>
                 </CardFooter>
               </Card>
             ))}
           </div>
         </section>
       </main>
-
-      
+      <footer className="bg-gray-100 text-center p-4 mt-8">
+        <p>&copy; 2023 MerkZone. Todos los derechos reservados.</p>
+      </footer>
     </div>
-  )
+  );
 }

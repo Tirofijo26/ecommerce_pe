@@ -274,7 +274,9 @@ export default function VendorDashboard() {
         </Tabs>
       </main>
 
-      
+      <footer className="bg-gray-100 text-center p-4 mt-8">
+        <p>&copy; 2023 MerkZone. Todos los derechos reservados.</p>
+      </footer>
     </div>
   );
 }
