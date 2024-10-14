@@ -30,6 +30,7 @@ export const OrderSumary = () => {
 
   return (
     <div className="grid grid-cols-2">
+      
       <span>No. Productos</span>
       <span className="text-right">
         {itemsInCart === 1 ? "1 artículo" : `${itemsInCart} artículos`}

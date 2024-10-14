@@ -12,6 +12,7 @@ export const ProductsInCart = () => {
     (state) => state.updateProductQuantity
   );
   const productInCart = useCartStore((state) => state.cart);
+  
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {

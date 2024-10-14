@@ -1,4 +1,5 @@
 export * from './producto/quantity-selector/QuantitySelector';
+export * from './ui/Title';
 export * from './ui/button';
 export * from './ui/card';
 export * from './ui/input';
