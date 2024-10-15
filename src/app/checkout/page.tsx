@@ -62,9 +62,9 @@ export default function CheckoutPage() {
                 />
                 <div>
                   <p>{product.nombre}</p>
-                  <p>{product.precio} x 3</p>
+                  <p>{`${product.precio} X ${itemsInCart}`}</p>
                   <p className="font-bold">
-                    Subtotal: ${currencyFormat(product.precio * 3)}
+                    Subtotal: ${currencyFormat(product.precio * itemsInCart)}
                   </p>
                 </div>
               </div>
