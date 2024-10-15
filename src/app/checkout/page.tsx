@@ -51,7 +51,7 @@ export default function CheckoutPage() {
               <div className="flex mb-5" key={product.nombre}>
                 <Image
                   className="mr-5 rounded"
-                  src={`/products/${product.image}`}
+                  src={product.image}
                   width={100}
                   height={100}
                   style={{
