@@ -11,6 +11,7 @@ export interface CartProduct {
 interface State {
   cart: CartProduct[];
 
+
   getTotalItems: () => number;
 
   addProductTocart: (product: CartProduct) => void;

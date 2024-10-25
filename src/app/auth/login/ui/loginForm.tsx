@@ -26,13 +26,13 @@ export const LoginForm = () => {
 
     if (usuarioValido.length === 1 && usuarioValido[0].rol === "vendedor") {
       updateUsuarioIniciado(usuarioValido[0]);
-      router.replace("/dashboard");
+      router.replace("/seller");
     } else if (
       usuarioValido.length === 1 &&
       usuarioValido[0].rol === "comprador"
     ) {
       updateUsuarioIniciado(usuarioValido[0]);
-      router.replace("/buyer");
+      router.replace("/");
     } else {
       alert("credenciales incorrectas");
     }

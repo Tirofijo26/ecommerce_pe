@@ -14,7 +14,7 @@ export default function CartPage() {
           <div className="lg:col-span-2">
             <div className="bg-white shadow-sm rounded-lg p-6">
               <span className="text-xl font-semibold text-gray-900">Agregar más items</span>
-              <Link className="text-green-600 hover:text-green-700 underline block mb-6" href="/buyer">
+              <Link className="text-green-600 hover:text-green-700 underline block mb-6" href="/">
                 Continúa comprando
               </Link>
 
