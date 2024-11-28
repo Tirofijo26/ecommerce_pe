@@ -26,7 +26,7 @@ export default function CheckoutPage() {
 
   const pagar = () => {
     alert('Pago realizado')
-    router.replace('buyer')
+    router.replace('/')
   }
 
   return (
@@ -38,7 +38,7 @@ export default function CheckoutPage() {
           <div className="lg:col-span-2">
             <div className="bg-white shadow-sm rounded-lg p-6">
               <span className="text-xl font-semibold text-gray-900">Ajustar elementos</span>
-              <Link className="text-green-600 hover:text-green-700 underline block mb-6" href="/cart">
+              <Link className="text-blue-600 hover:text-blue-700 underline block mb-6" href="/cart">
                 Editar carrito
               </Link>
 
@@ -103,17 +103,17 @@ export default function CheckoutPage() {
             <div className="mt-6">
               <p className="text-xs text-gray-500 mb-4">
                 Al hacer clic en &quot;Pagar&quot;, aceptas nuestros{" "}
-                <a className="text-green-600 hover:text-green-700 underline" href="#">
+                <a className="text-blue-600 hover:text-blue-700 underline" href="#">
                   términos y condiciones
                 </a>{" "}
                 y{" "}
-                <a className="text-green-600 hover:text-green-700 underline" href="#">
+                <a className="text-blue-600 hover:text-blue-700 underline" href="#">
                   política de privacidad
                 </a>
               </p>
 
               <button
-                className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-150 ease-in-out"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-150 ease-in-out"
                 onClick={pagar}
               >
                 Pagar

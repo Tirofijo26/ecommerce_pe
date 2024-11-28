@@ -14,7 +14,7 @@ export default function CartPage() {
           <div className="lg:col-span-2">
             <div className="bg-white shadow-sm rounded-lg p-6">
               <span className="text-xl font-semibold text-gray-900">Agregar más items</span>
-              <Link className="text-green-600 hover:text-green-700 underline block mb-6" href="/">
+              <Link className="text-blue-600 hover:text-blue-700 underline block mb-6" href="/">
                 Continúa comprando
               </Link>
 
@@ -31,7 +31,7 @@ export default function CartPage() {
 
             <div className="mt-6">
               <Link
-                className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition duration-150 ease-in-out flex items-center justify-center"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-150 ease-in-out flex items-center justify-center"
                 href="/checkout"
               >
                 Enviar Orden

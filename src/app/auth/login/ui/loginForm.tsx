@@ -39,11 +39,11 @@ export const LoginForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-green-50">
+    <div className="flex items-center justify-center min-h-screen bg-blue-50">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-center text-2xl font-semibold text-green-700">
-            Bienvenido a MerkZone
+          <CardTitle className="text-center text-2xl font-semibold text-blue-700">
+            Bienvenido a SaludPlus
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -54,7 +54,7 @@ export const LoginForm = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
             <Input
               type="password"
@@ -62,11 +62,11 @@ export const LoginForm = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
             <Button
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
             >
               Iniciar Sesión
             </Button>
@@ -75,7 +75,7 @@ export const LoginForm = () => {
             Nuevo Usario &nbsp;
             <Link
               href="/auth/new-account"
-              className=" text-center text-sm text-green-600 hover:underline"
+              className=" text-center text-sm text-blue-600 hover:underline"
             >
               Registrarse
             </Link>

@@ -13,6 +13,7 @@ export const ProductGridItem = ({ product }: Props) => {
     const cartProduct: CartProduct = {
       id: product.id,
       nombre: product.nombre,
+      descripcion: product.descripcion,
       precio: product.precio,
       cantidad: product.cantidad,
       image: product.image,
@@ -32,7 +33,8 @@ export const ProductGridItem = ({ product }: Props) => {
           className="w-full h-80 object-cover rounded-md mb-4"
         />
         <h3 className="text-lg font-semibold">{product.nombre}</h3>
-        <p className="text-green-600 font-bold">
+        <p>{product.descripcion}</p>
+        <p className="text-blue-600 font-bold">
           {currencyFormat(product.precio)}
         </p>
       </div>

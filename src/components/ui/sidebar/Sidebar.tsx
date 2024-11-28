@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 
-const categories = ["Todos los productos", "Electrónica", "Ropa", "Hogar"];
+const categories = ["Todos los productos", "Medicamentos", "Belleza", "Cuidado Personal"];
 
 
 export const Sidebar = () => {
@@ -17,8 +17,8 @@ export const Sidebar = () => {
             key={category}
             className={`block w-full text-left px-4 py-2 rounded ${
               activeCategory === category
-                ? "bg-green-600 text-white"
-                : "hover:bg-green-100"
+                ? "bg-blue-600 text-white"
+                : "hover:bg-blue-100"
             }`}
             onClick={() => setActiveCategory(category)}
           >

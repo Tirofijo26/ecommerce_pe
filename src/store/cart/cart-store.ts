@@ -3,6 +3,7 @@ import { create } from "zustand";
 export interface CartProduct {
   id: number;
   nombre: string;
+  descripcion: string;
   precio: number;
   cantidad: number;
   image: string;

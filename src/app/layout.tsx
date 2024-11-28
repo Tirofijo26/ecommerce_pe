@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MerkZone",
-  description: "Una tienda virtual",
+  title: "SaludPlus",
+  description: "Sistema de información de una drogueria",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
         {children}
 
         <footer className="bg-gray-100 text-center p-4">
-          <p>&copy; 2023 MerkZone. Todos los derechos reservados.</p>
+          <p>&copy; 2023 SaludPlus. Todos los derechos reservados.</p>
         </footer>
       </body>
     </html>

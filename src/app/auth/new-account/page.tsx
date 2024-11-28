@@ -28,11 +28,11 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-green-50">
+    <div className="flex items-center justify-center min-h-screen bg-blue-50">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-center text-2xl font-semibold text-green-700">
-            Registro en MerkZone
+          <CardTitle className="text-center text-2xl font-semibold text-blue-700">
+            Registro en SaludPlus
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -86,7 +86,7 @@ export default function RegisterForm() {
 
             <Button
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
             >
               Registrarse
             </Button>

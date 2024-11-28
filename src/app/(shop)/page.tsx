@@ -4,83 +4,84 @@ import { TopMenu } from "@/components/ui/top-menu/TopMenu";
 const products = [
   {
     id: 1,
-    nombre: "Camisa Oversize",
+    nombre: "Atorvastatina",
+    descripcion:'20mg X30 Tabletas',
     cantidad: 1,
-    precio: 20000,
+    precio: 45150,
     image:
-      "https://trueshop.co/cdn/shop/files/camiseta_oversized_cuello_tejido_negra_1.jpg?v=1703195418",
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/366527-800-800?v=638455303941030000&width=800&height=800&aspect=true",
   },
   {
     id: 2,
-    nombre: "Televisores",
+    nombre: "Rosuvastatina",
+    descripcion:'20mg X28 Tabletas',
     cantidad: 1,
-    precio: 2000000,
+    precio: 171550,
     image:
-      "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCO/121755628_01/w=1500,h=1500,fit=pad",
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/230714-800-800?v=637344901199500000&width=800&height=800&aspect=true",
   },
   {
     id: 3,
-    nombre: "Mesa de noche",
+    nombre: "Neviot",
+    descripcion:'100mg X30 Capsulas',
     cantidad: 1,
-    precio: 200000,
+    precio: 201200,
     image:
-      "https://tugocolombia.vteximg.com.br/arquivos/ids/215161/6177213-2.jpg",
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/334626-800-800?v=638150415148430000&width=800&height=800&aspect=true",
   },
   {
     id: 4,
-    nombre: "Impresoras",
+    nombre: "Candesartan",
+    descripcion:'16Mg Caja X 30 Tabletas',
     cantidad: 1,
-    precio: 600000,
+    precio: 33300,
     image:
-      "https://mediaserver.goepson.com/ImConvServlet/imconv/61dcb6a700968d5fe27870dc9e72d7151805d623/1200Wx1200H?use=banner&hybrisId=B2C&assetDescr=L8050_aberta",
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/274415-800-800?v=637727542544970000&width=800&height=800&aspect=true",
   },
   {
     id: 5,
-    nombre: "Calzados",
+    nombre: "Rosuvina 10",
+    descripcion:'10 mg X28 Tabletas Recubiertas',
     cantidad: 1,
-    precio: 15000,
+    precio: 60450,
     image:
-      "https://i3.wp.com/media.aldoshoes.com/v3/product/zale/220-001-043/zale_brown_220-001-043_alt1_sq_nt_1000x1000.jpg?ssl=1",
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/188589-800-800?v=636051349910370000&width=800&height=800&aspect=true",
   },
   {
     id: 6,
-    nombre: "Bolsos",
+    nombre: "Vytorin",
+    descripcion:'10/20Mg X 28 Comprimidos',
     cantidad: 1,
-    precio: 12000,
+    precio: 98550,
     image:
-      "https://elaco.vteximg.com.br/arquivos/ids/670034-1000-1464/-elaco-producto-Bolsosycarteras-FUCSIA-E411866-1.jpg?v=638327278624970000",
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/181156-600-600?v=635972038815530000&width=600&height=600&aspect=true",
   },
   {
     id: 7,
-    nombre: "Carteras",
+    nombre: "Protector Solar Eucerin Oil",
+    descripcion:'Fps50 X 50Ml',
     cantidad: 1,
-    precio: 70000,
+    precio: 95500,
     image:
-      "https://cdnx.jumpseller.com/urbenmood/image/45356295/PS917_Billetera_Clip_Hombre_Cuero_Sintetico_-_Color_Negro_Cafe.jpeg?1707442486",
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/336572-800-800?v=638171993585030000&width=800&height=800&aspect=true",
   },
   {
     id: 8,
-    nombre: "Juguetes",
+    nombre: "Isdin Fotoprotector Uv Mineral Brus",
+    descripcion:'Spf50 X2g',
     cantidad: 1,
-    precio: 50000,
+    precio: 91360,
     image:
-      "https://exitocol.vtexassets.com/arquivos/ids/14997473/MUNECAS-GRANDES-BOING-TOYS-3299514_b.jpg?v=638006066767830000",
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/366485-600-600?v=638455224593070000&width=600&height=600&aspect=true",
   },
   {
     id: 9,
-    nombre: "Figuras de acción",
+    nombre: "Listerine Cool Mint",
+    descripcion:'X 1 Litro',
     cantidad: 1,
-    precio: 60000,
+    precio: 27750,
     image:
-      "https://http2.mlstatic.com/D_NQ_NP_868773-MCO76184153102_052024-O.webp",
-  },
-  {
-    id: 10,
-    nombre: "Maquillaje",
-    cantidad: 1,
-    precio: 100000,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIuULFAx_Vx-TvKSZTEfZY9P9Bgizr5OeydP9W6EBwYQ&s",
+      "https://locatelcolombia.vtexassets.com/arquivos/ids/379702-600-600?v=638614485852230000&width=600&height=600&aspect=true",
   },
 ];
 

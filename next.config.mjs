@@ -46,6 +46,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cdnx.jumpseller.com'
       },
+      {
+        protocol: 'https',
+        hostname: 'locatelcolombia.vtexassets.com'
+      },
     ]
   }
 };

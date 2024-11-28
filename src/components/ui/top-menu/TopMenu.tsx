@@ -31,9 +31,9 @@ export const TopMenu = () => {
   };
 
   return (
-    <header className="bg-green-600 text-white p-4">
+    <header className="bg-blue-600 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">MerkZone</h1>
+        <h1 className="text-2xl font-bold">SaludPlus</h1>
         <div className="flex items-center space-x-4 pr-4">
           <Link href="/profile">
             <RiUser3Line size={28} />
@@ -41,7 +41,7 @@ export const TopMenu = () => {
 
           <div className="relative">
             {totatlItemsInCart > 0 && (
-              <span className="fade-in absolute text-xs rounded-full px-1 font-bold -top-3 -right-2 bg-white text-green-600">
+              <span className="fade-in absolute text-xs rounded-full px-1 font-bold -top-3 -right-2 bg-white text-blue-600">
                 {totatlItemsInCart}
               </span>
             )}
